@@ -25,12 +25,7 @@
 
     a {
       text-decoration: none;
-      color: #1e88e5;
-      transition: color 0.3s ease;
-    }
-
-    a:hover {
-      color: #1565c0;
+      color: inherit;
     }
 
     /* ===== Header ===== */
@@ -71,22 +66,21 @@
     /* ===== Main Content ===== */
     main {
       flex: 1;
-      max-width: 900px;
+      max-width: 1000px;
       margin: 1rem auto 2rem;
       padding: 0 1rem;
     }
 
     .days-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
-      gap: 1rem;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 1.2rem;
     }
 
     .day-card {
       background: #fff;
       border-radius: 10px;
-      padding: 1.2rem;
-      text-align: center;
+      padding: 1.5rem;
       box-shadow: 0 2px 6px rgba(0,0,0,0.05);
       transition: transform 0.2s ease, box-shadow 0.2s ease;
     }
@@ -96,10 +90,17 @@
       box-shadow: 0 4px 12px rgba(0,0,0,0.1);
     }
 
-    .day-card a {
-      font-weight: 600;
+    .day-card h3 {
       color: #1e88e5;
-      display: block;
+      margin-bottom: 0.5rem;
+      font-size: 1.1rem;
+    }
+
+    .day-card ul {
+      list-style: disc;
+      padding-left: 1.2rem;
+      line-height: 1.5;
+      color: #555;
     }
 
     /* ===== Footer ===== */
@@ -145,27 +146,187 @@
   <main>
     <h2 style="text-align:center; margin-bottom:1.5rem; color:#1e88e5;">Internship Progress</h2>
     <div class="days-grid">
-      <!-- Generate Day 1 to Day 20 -->
-      <div class="day-card"><a href="days/day-01.html">Day 01</a></div>
-      <div class="day-card"><a href="days/day-02.html">Day 02</a></div>
-      <div class="day-card"><a href="days/day-03.html">Day 03</a></div>
-      <div class="day-card"><a href="days/day-04.html">Day 04</a></div>
-      <div class="day-card"><a href="days/day-05.html">Day 05</a></div>
-      <div class="day-card"><a href="days/day-06.html">Day 06</a></div>
-      <div class="day-card"><a href="days/day-07.html">Day 07</a></div>
-      <div class="day-card"><a href="days/day-08.html">Day 08</a></div>
-      <div class="day-card"><a href="days/day-09.html">Day 09</a></div>
-      <div class="day-card"><a href="days/day-10.html">Day 10</a></div>
-      <div class="day-card"><a href="days/day-11.html">Day 11</a></div>
-      <div class="day-card"><a href="days/day-12.html">Day 12</a></div>
-      <div class="day-card"><a href="days/day-13.html">Day 13</a></div>
-      <div class="day-card"><a href="days/day-14.html">Day 14</a></div>
-      <div class="day-card"><a href="days/day-15.html">Day 15</a></div>
-      <div class="day-card"><a href="days/day-16.html">Day 16</a></div>
-      <div class="day-card"><a href="days/day-17.html">Day 17</a></div>
-      <div class="day-card"><a href="days/day-18.html">Day 18</a></div>
-      <div class="day-card"><a href="days/day-19.html">Day 19</a></div>
-      <div class="day-card"><a href="days/day-20.html">Day 20</a></div>
+      
+      <a href="days/day-01.html" class="day-card">
+        <h3>Day 01 – VMware ESXi, Windows VM, and RDP</h3>
+        <ul>
+          <li>Installed VMware ESXi hypervisor.</li>
+          <li>Created first Windows virtual machine.</li>
+          <li>Configured and tested RDP access.</li>
+        </ul>
+      </a>
+
+      <a href="days/day-02.html" class="day-card">
+        <h3>Day 02 – Ubuntu VM + SSH Remote Access</h3>
+        <ul>
+          <li>Deployed Ubuntu latest version as VM.</li>
+          <li>Configured SSH service for remote login.</li>
+          <li>Tested remote access from India → Paris.</li>
+        </ul>
+      </a>
+
+      <a href="days/day-03.html" class="day-card">
+        <h3>Day 03 – ESXi Networking + Cisco Router</h3>
+        <ul>
+          <li>Configured ESXi networking and subnets.</li>
+          <li>Integrated Cisco IOS router for NAT.</li>
+          <li>Verified VM reachability across subnets.</li>
+        </ul>
+      </a>
+
+      <a href="days/day-04.html" class="day-card">
+        <h3>Day 04 – pfSense Firewall Setup</h3>
+        <ul>
+          <li>Installed pfSense as a VM firewall.</li>
+          <li>Configured WAN/LAN interfaces.</li>
+          <li>Set static routes and NAT for all VMs.</li>
+        </ul>
+      </a>
+
+      <a href="days/day-05.html" class="day-card">
+        <h3>Day 05 – WireGuard VPN</h3>
+        <ul>
+          <li>Deployed WireGuard VPN tunnel.</li>
+          <li>Secured connection between Paris and India.</li>
+          <li>Verified encrypted traffic flow.</li>
+        </ul>
+      </a>
+
+      <a href="days/day-06.html" class="day-card">
+        <h3>Day 06 – OpenVPN Site-to-Site & Client Mode</h3>
+        <ul>
+          <li>Configured OpenVPN in both modes.</li>
+          <li>Compared features vs WireGuard.</li>
+          <li>Tested connectivity and performance.</li>
+        </ul>
+      </a>
+
+      <a href="days/day-07.html" class="day-card">
+        <h3>Day 07 – Tailscale Mesh VPN</h3>
+        <ul>
+          <li>Setup Tailscale for zero-config mesh.</li>
+          <li>Enabled subnet routing across nodes.</li>
+          <li>Tested peer-to-peer connectivity.</li>
+        </ul>
+      </a>
+
+      <a href="days/day-08.html" class="day-card">
+        <h3>Day 08 – FreeRADIUS + Captive Portal</h3>
+        <ul>
+          <li>Configured FreeRADIUS server on pfSense.</li>
+          <li>Integrated Captive Portal authentication.</li>
+          <li>Tested user login with local credentials.</li>
+        </ul>
+      </a>
+
+      <a href="days/day-09.html" class="day-card">
+        <h3>Day 09 – DNS/DHCP Server</h3>
+        <ul>
+          <li>Setup centralized DHCP scopes.</li>
+          <li>Created internal DNS zones and records.</li>
+          <li>Validated IP assignments and DNS queries.</li>
+        </ul>
+      </a>
+
+      <a href="days/day-10.html" class="day-card">
+        <h3>Day 10 – Migration to Proxmox</h3>
+        <ul>
+          <li>Imported existing VMs to Proxmox.</li>
+          <li>Configured virtual bridge & VLAN-aware network.</li>
+          <li>Verified VM connectivity post-migration.</li>
+        </ul>
+      </a>
+
+      <a href="days/day-11.html" class="day-card">
+        <h3>Day 11 – MikroTik RouterOS</h3>
+        <ul>
+          <li>Configured VLANs, NAT, and routes.</li>
+          <li>Enabled remote management access.</li>
+          <li>Integrated MikroTik with lab network.</li>
+        </ul>
+      </a>
+
+      <a href="days/day-12.html" class="day-card">
+        <h3>Day 12 – OSPF with Cisco + MikroTik</h3>
+        <ul>
+          <li>Implemented dynamic routing (OSPF).</li>
+          <li>Established neighbor adjacency.</li>
+          <li>Verified LSAs & route propagation.</li>
+        </ul>
+      </a>
+
+      <a href="days/day-13.html" class="day-card">
+        <h3>Day 13 – FRRouting on Linux</h3>
+        <ul>
+          <li>Replaced Cisco with open-source router.</li>
+          <li>Configured OSPF and route redistribution.</li>
+          <li>Validated end-to-end reachability.</li>
+        </ul>
+      </a>
+
+      <a href="days/day-14.html" class="day-card">
+        <h3>Day 14 – IDS/IPS (Suricata / Zeek)</h3>
+        <ul>
+          <li>Deployed Suricata and Zeek IDS/IPS.</li>
+          <li>Monitored and analyzed network traffic.</li>
+          <li>Detected and logged suspicious activities.</li>
+        </ul>
+      </a>
+
+      <a href="days/day-15.html" class="day-card">
+        <h3>Day 15 – Zabbix / Grafana / Prometheus</h3>
+        <ul>
+          <li>Setup centralized monitoring platform.</li>
+          <li>Added ESXi, Proxmox, VPNs, routers.</li>
+          <li>Visualized metrics in Grafana dashboards.</li>
+        </ul>
+      </a>
+
+      <a href="days/day-16.html" class="day-card">
+        <h3>Day 16 – Ansible Automation</h3>
+        <ul>
+          <li>Automated VM configurations and IP setup.</li>
+          <li>Created user accounts via playbooks.</li>
+          <li>Validated automation across nodes.</li>
+        </ul>
+      </a>
+
+      <a href="days/day-17.html" class="day-card">
+        <h3>Day 17 – Docker Networking Basics</h3>
+        <ul>
+          <li>Deployed a small web app container.</li>
+          <li>Configured reverse proxy for app access.</li>
+          <li>Integrated with existing infrastructure.</li>
+        </ul>
+      </a>
+
+      <a href="days/day-18.html" class="day-card">
+        <h3>Day 18 – Proxmox Cluster + HA</h3>
+        <ul>
+          <li>Created multi-node Proxmox cluster.</li>
+          <li>Enabled high availability setup.</li>
+          <li>Performed live VM migration.</li>
+        </ul>
+      </a>
+
+      <a href="days/day-19.html" class="day-card">
+        <h3>Day 19 – Backups, Snapshots & Restore</h3>
+        <ul>
+          <li>Defined full backup policy.</li>
+          <li>Created VM snapshots and tested restore.</li>
+          <li>Simulated disaster-recovery scenario.</li>
+        </ul>
+      </a>
+
+      <a href="days/day-20.html" class="day-card">
+        <h3>Day 20 – Final Integration Project</h3>
+        <ul>
+          <li>Built cohesive infrastructure lab.</li>
+          <li>Integrated Proxmox, pfSense, Cisco, MikroTik, VPNs.</li>
+          <li>Presented design diagrams and live demo.</li>
+        </ul>
+      </a>
+
     </div>
   </main>
 
@@ -176,3 +337,5 @@
 
 </body>
 </html>
+
+
